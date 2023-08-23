@@ -3,7 +3,7 @@ import SocialLinks from './SocialLinks'
 import Subscribe from './Subscribe'
 import Image from 'next/image'
 import Ad2 from "/public/assets/ad-2.png";
-import AboutProfile from "/public/assets/about-profile.jpg";
+import AboutProfile from "/public/assets/chat-bot.png";
 
 type Props = {}
 
@@ -37,7 +37,7 @@ const Sidebar = (props: Props) => {
             />
         </div>
         <h4 className="py-3 px-5 text-wh-500 font-bold text-center">
-            Costa del Rica das Biscuit
+            Little Biscuit
         </h4>
         <p className="text-wh-500 text-center text-sm">
             Meet Mr. Biscuit, the visionary mind behind our AI blog, pioneering the exploration of limitless possibilities and expanding horizons.
