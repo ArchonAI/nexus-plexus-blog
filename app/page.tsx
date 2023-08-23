@@ -1,6 +1,7 @@
 import Trending from "./(home)/Trending";
 import Tech from "./(home)/Tech";
 import Travel from "./(home)/Travel";
+import Business from "./(home)/Business";
 import Other from "./(shared)/Other";
 import Subscribe from "./(shared)/Subscribe";
 import Sidebar from "./(shared)/Sidebar";
@@ -32,6 +33,7 @@ export default async function Home() {
     const trendingPosts: Array<Post> = [];
     const techPosts: Array<Post> = [];
     const travelPosts: Array<Post> = [];
+    const businessPosts: Array<Post> = [];
     const otherPosts: Array<Post> = [];
 
     posts.forEach((post:Post,i:number) => {
@@ -42,15 +44,17 @@ export default async function Home() {
         techPosts.push(post);
       } else if (post?.category === "Travel") {
         travelPosts.push(post);
+      } else if (post?.category === "Business") {
+        businessPosts.push(post);
       } else if (post?.category === "Interior Design") {
         otherPosts.push(post);
       }
     })
 
-    return [trendingPosts, techPosts, travelPosts, otherPosts];
+    return [trendingPosts, techPosts, travelPosts, businessPosts, otherPosts];
   }
 
-  const [trendingPosts, techPosts, travelPosts, otherPosts] = formatPosts();
+  const [trendingPosts, techPosts, travelPosts, businessPosts, otherPosts] = formatPosts();
 
   return (
     <main className="px-10 leading-7">
@@ -59,6 +63,7 @@ export default async function Home() {
       <div className="basis-3/4">
         <Tech techPosts={techPosts}/>
         <Travel  travelPosts={travelPosts}/>
+        <Business  businessPosts={businessPosts}/>
         <Other  otherPosts={otherPosts}/>
         <div className="hidden md:block">
           <Subscribe />
