@@ -1,4 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Note: started by following Ed Roh's opensource Youtube tutorial.
+
+Made improvements and modifications:
+*updated syntax to latest OpenAI, NextJs versions
+*Replaced all content to reflect AI Blog
+*bug fixes
 
 ## Getting Started
 
